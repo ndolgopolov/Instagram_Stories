@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 /******** UITableViewCell&UICollectionViewCell<Extension> *******************************/
-protocol CellConfigurer:class {
+public protocol CellConfigurer:class {
     static var nib: UINib {get}
     static var reuseIdentifier: String {get}
 }
 
-extension CellConfigurer {
+public extension CellConfigurer {
     static var nib: UINib {
         return UINib(nibName: reuseIdentifier, bundle: nil)
     }
@@ -28,7 +28,7 @@ extension UICollectionViewCell: CellConfigurer {}
 extension UITableViewCell: CellConfigurer {}
 
 /*************************** UINIB<Extension> ************************************************/
-extension UINib {
+public extension UINib {
     class func nib(with name: String) -> UINib {
         return UINib(nibName: name, bundle: nil)
     }
