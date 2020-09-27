@@ -76,11 +76,11 @@ final class IGStoryPreviewController: UIViewController, UIGestureRecognizerDeleg
         _view.snapsCollectionView.addGestureRecognizer(dismissGesture)
         
         // This should be handled for only currently logged in user story and not for all other user stories.
-        if(isDeleteSnapEnabled) {
-            showActionSheetGesture.delegate = self
-            showActionSheetGesture.addTarget(self, action: #selector(showActionSheet))
-            _view.snapsCollectionView.addGestureRecognizer(showActionSheetGesture)
-        }
+//        if(isDeleteSnapEnabled) {
+//            showActionSheetGesture.delegate = self
+//            showActionSheetGesture.addTarget(self, action: #selector(showActionSheet))
+//            _view.snapsCollectionView.addGestureRecognizer(showActionSheetGesture)
+//        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
