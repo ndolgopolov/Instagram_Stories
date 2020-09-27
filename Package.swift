@@ -20,8 +20,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "Instagram_Stories",
-            dependencies: [],
-            path: "InstagramStories/Sources"),
+            dependencies: []),
 //        .testTarget(
 //            name: "Instagram_StoriesTests",
 //            dependencies: ["Instagram_Stories"]),
