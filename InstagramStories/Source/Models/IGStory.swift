@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class IGStory: Codable {
+public struct IGStory: Codable {
     // Note: To retain lastPlayedSnapIndex value for each story making this type as class
     public var snapsCount: Int {
         return snaps.count
