@@ -121,7 +121,7 @@ final class IGStoryPreviewCell: UICollectionViewCell, UIScrollViewDelegate {
     public var story: IGStory? {
         didSet {
             storyHeaderView.story = story
-            if let picture = story?.user.picture {
+            if let picture = story?.user?.picture {
                 storyHeaderView.snaperImageView.setImage(url: picture)
             }
         }
@@ -549,7 +549,7 @@ final class IGStoryPreviewCell: UICollectionViewCell, UIScrollViewDelegate {
         /**
          Once we set isDeleted, snaps and snaps count will be reduced by one. So, instead of snapIndex+1, we need to pass snapIndex to willMoveToPreviousOrNextSnap. But the corresponding progressIndicator is not currently in active. Another possible way is we can always remove last presented progress indicator. So that snapIndex and tag will matches, so that progress indicator starts.
          */
-        story?.snaps[snapIndex].isDeleted = true
+//        story?.snaps[snapIndex].isDeleted = true
         direction = .forward
         for sIndex in 0..<snapIndex {
             if let holderView = self.getProgressIndicatorView(with: sIndex),

@@ -242,6 +242,6 @@ final class IGStoryPreviewHeaderView: UIView {
                 pv.widthConstraint!
                 ])
         }
-        snaperNameLabel.text = story?.user.name
+        snaperNameLabel.text = story?.user?.name
     }
 }
