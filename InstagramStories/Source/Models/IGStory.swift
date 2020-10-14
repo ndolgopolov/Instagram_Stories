@@ -21,7 +21,7 @@ public struct IGStory: Codable {
         return _snaps.filter{!($0.isDeleted)}
     }
     public var internalIdentifier: String
-    public var lastUpdated: Int
+    public var lastUpdated: Int = 0
     public var user: IGUser?
     var lastPlayedSnapIndex = 0
     var isCompletelyVisible = false
@@ -33,6 +33,11 @@ public struct IGStory: Codable {
         case internalIdentifier = "id"
         case lastUpdated = "last_updated"
         case user = "user"
+    }
+    
+    public init(snaps: [IGSnap], name: String) {
+        _snaps = snaps
+        internalIdentifier = name
     }
 }
 
